@@ -26,6 +26,13 @@ public class NumberPlayList {
         }
         MyConsumer action = new MyConsumer();
         myNumberList.forEach(action);
+
+        // using Anonymous class
+        myNumberList.forEach(new Consumer<Integer>() {
+            public void accept(Integer t) {
+                System.out.println("values of list using Anonymous class: " + t);
+            }
+        });
     }
 
 }
